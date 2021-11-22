@@ -1,3 +1,5 @@
+import my_number.SimpleFraction;
+
 import java.util.HashSet;
 
 public class TSet <T>{
@@ -84,5 +86,12 @@ public class TSet <T>{
 
     public HashSet<T> getMySet() {
         return mySet;
+    }
+
+    public static void main(String[] args) {
+        TSet<SimpleFraction> set = new TSet<>();
+        set.add(new SimpleFraction(1, 2));
+
+        System.out.println(set.getMySet());
     }
 }

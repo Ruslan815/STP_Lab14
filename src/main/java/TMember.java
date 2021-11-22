@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public class TMember <T>{
+public class TMember {
 
     private long coefficient;
     private long degree;
@@ -12,14 +12,14 @@ public class TMember <T>{
         this.degree = degree;
     }
 
-    public boolean isEquals(TMember<T> member) {
+    public boolean isEquals(TMember member) {
         return this.equals(member);
     }
 
-    public TMember<T> derivative() {
+    public TMember derivative() {
         long newCoefficient = this.coefficient * this.degree;
         long newDegree = this.degree - 1;
-        return new TMember<>(newCoefficient, newDegree);
+        return new TMember(newCoefficient, newDegree);
     }
 
     public double calculate(double number) {
@@ -53,7 +53,7 @@ public class TMember <T>{
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        TMember<?> tMember = (TMember<?>) o;
+        TMember tMember = (TMember) o;
         return coefficient == tMember.coefficient && degree == tMember.degree;
     }
 
