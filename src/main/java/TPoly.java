@@ -57,6 +57,7 @@ public class TPoly {
         return new TPoly(newList);
     }
 
+    // TODO Умножение скобки на скобку
     public TPoly multiply(TPoly somePoly) {
         long maxDegree = Math.max(this.getMaxDegreeOfPoly(), somePoly.getMaxDegreeOfPoly());
         List<TMember> newList = new LinkedList<>();
